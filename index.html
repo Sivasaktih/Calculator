@@ -4,43 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Calculator</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin-top: 100px;
-        }
-        .calculator {
-            max-width: 300px;
-            margin: 0 auto;
-            border: 1px solid black;
-            border-radius: 5px;
-            padding: 10px;
-            background:#0d0d0d;
-        }
-        .calculator input[type="text"] {
-            width: 100%;
-            font-size: 24px;
-            padding: 10px;
-            margin-bottom: 10px;
-            border: none;
-        }
-        .calculator .buttons {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 5px;
-        }
-        .calculator button {
-            font-size: 20px;
-            padding: 10px;
-            text-align: center;
-            border: none;
-            cursor: pointer;
-        }
-        #display
-        {
-            width:93.6%;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="calculator">
@@ -68,23 +32,8 @@
         </div>
     </div>
 
-    <script>
-        function appendToDisplay(value) {
-            document.getElementById("display").value += value;
-        }
-
-        function clearDisplay() {
-            document.getElementById("display").value = "";
-        }
-
-        function calculate() {
-            const display = document.getElementById("display");
-            try {
-                display.value = eval(display.value);
-            } catch (error) {
-                display.value = "Error";
-            }
-        }
+    <script src="app.js">
+   
     </script>
 </body>
 </html>
